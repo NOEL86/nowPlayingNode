@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Now Playing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="/public/images/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Bangers|Bree+Serif|Open+Sans+Condensed:300|Oswald|Passion+One|Sigmar+One|Fjalla+One"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="/public/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/public/style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img src="public/images/favicon.png" style="width: 2.5%; height: 2.5%;" alt="Popcorn">
+        <a class="navbar-brand" href="/">Now Playing</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/movies">Movies
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/tv">TV
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input id="typeSearch" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <a href="/dynamic">
+                    <button id="typeSearchButton" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </a>
+            </form>
+        </div>
+    </nav>
+
+    <div class="card card-block d-flex background">
+        <div id="welcome" class="card-body align-items-center d-flex justify-content-center">
+            <div>
+                <span class="align-middle">Welcome to our page!</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="card center">
+        <div class="card-header topPicks">
+            Check Out Our Developers' Top Picks!
+        </div>
+        <div id="test" class="card-body posterCard">
+            <a href="/dynamic">
+                <img class="card-img-top devPicks" data-name="Lord of the Rings" src="public/images/lotr.jpg" style="width: 15%; height: 15%;"
+                    alt="Lord of the Rings" />
+            </a>
+            <a href="/dynamic">
+                <img class="card-img-top devPicks" data-name="Remember the Titans" src="public/images/remember-the-titans.jpg" style="width: 15%; height: 15%;"
+                    alt="Remember the Titans" />
+            </a>
+            <a href="/dynamic">
+                <img class="card-img-top devPicks" data-name="Pretty Woman" src="public/images/pretty-woman.jpg" style="width: 15%; height: 15%;"
+                    alt="Pretty Woman" />
+            </a>
+            <a href="/dynamic">
+                <img class="card-img-top devPicks" data-name="Die Hard" src="public/images/die-hard.jpg" style="width: 15%; height: 15%;"
+                    alt="Die Hard" />
+            </a>
+            <a href="/dynamic">
+                <img class="card-img-top devPicks" data-name="Big" src="public/images/big.jpg" style="width: 15%; height: 15%;" alt="Big"
+                />
+            </a>
+            <a href="/dynamic">
+                <img class="card-img-top devPicks" data-name="Django Unchained" src="public/images/django.jpg" style="width: 15%; height: 15%;"
+                    alt="Django" />
+            </a>
+        </div>
+
+
+        <script src="/public/jiggy.js"></script>
+</body>
+
+</html>

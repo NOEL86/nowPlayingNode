@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Now Playing: TV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="public/images/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Bangers|Bree+Serif|Open+Sans+Condensed:300|Oswald|Passion+One|Sigmar+One|Fjalla+One"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="public/reset.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="public/style.css" />
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+</head>
+
+<body id="moviesTV">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img src="public/images/favicon.png" style="width: 2.5%; height: 2.5%;" alt="Popcorn">
+        <a class="navbar-brand" href="/">Now Playing</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/movies">Movies
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/tv">TV
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input id="typeSearch" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <a href="/dynamic">
+                    <button id="typeSearchButton" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </a>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container-fluid center">
+        <div class="row">
+            <div class="col-md-2 mb-2"></div>
+            <div class="col-md-8 mb-2">
+                <div class="card mb-2 tvMenu">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid center">
+        <div class="row">
+            <div class="col-md-2 mb-4"></div>
+            <div class="col-md-4 mb-4">
+                <div class="card card-block d-flex bg-light">
+                    <div class="card-header todaysTV">Today's TV</div>
+                    <ul class="list-group list-group-flush tvList">
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card card-block d-flex bg-light">
+
+                    <div class="card-header bestofTV">Top Rated</div>
+                    <ul class="list-group list-group-flush tvTopRated">
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <script src="/public/jiggy.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+/* Font Options 
+/* font-family: 'Sigmar One', cursive !important; */
+
+/* font-family: 'Oswald', sans-serif !important; */
+
+/* font-family: 'Open Sans', sans-serif !important; */
+
+/* font-family: 'Open Sans Condensed', sans-serif !important; */
+
+/* font-family: 'Bree Serif', serif !important; */
+
+/* font-family: 'Passion One', cursive !important; */
+
+/* font-family: 'Bangers', cursive !important; */
+
+/* font-family: 'Fjalla One', sans-serif !important; */
+
+body {
+    background-color: #0e222f !important;
+}
+
+.background {
+    background-color: #0e222f !important;
+    border: none !important;
+}
+
+.navbar {
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.center {
+    text-align: center !important;
+}
+
+#welcome {
+    height: 250px;
+    color: white;
+    font-family: 'Bangers', cursive !important;
+    font-size: 5em;
+}
+
+.topPicks {
+    font-size: 2em;
+    font-family: 'Passion One', cursive !important;
+}
+
+.devPicks {
+    max-width: 238px;
+    max-height: 349px;
+}
+
+.container-fluid {
+    padding-top: 2em !important;
+}
+
+.tvMenu {
+    background-image: url(images/tv-menu-white.jpg);
+    background-size: cover;
+    min-height: 320px;
+    padding: 0px 0px 0px 0px !important;
+}
+
+.movieLink, .tvLink {
+    margin: 4px 0;
+    list-style: none !important;
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: bold;
+}
+
+.movieLink:hover {
+    color: #d9272d;
+}
+
+.movieMenu {
+    background-image: url(images/movie-menu-white.jpg);
+    background-size: cover;
+    min-height: 320px;
+}
+
+.container-fluid {
+    padding-top: 5em;
+    overflow-wrap: normal;
+}
+
+.nowPlaying, .nowStreaming, .todaysTV, .bestofTV {
+    font-size: 2em;
+    font-family: 'Passion One', cursive !important;
+    text-decoration: underline;
+}
+
+.dynamicApiTitle {
+    font-weight: bold;
+    padding-bottom: 15px !important;
+}
+
+.dynamicApiData {
+    font-family: 'Open Sans', sans-serif !important;
+    line-height: 20px !important;
+}
+
+#poster {
+    min-height: 471px !important;
+    min-width: 318px !important;
+    max-height: 471px !important;
+    max-width: 318px !important;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    #poster {
+        padding-bottom: 20px;
+    }
+}
+
+#title {
+    font-size: 24px;
+}
+
+.similarLink {
+    margin: 16px 0;
+    list-style: none !important;
+}
+
+.similarLink:hover {
+    color: #d9272d;
+}

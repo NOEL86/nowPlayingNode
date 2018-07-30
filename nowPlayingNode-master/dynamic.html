@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Now Playing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="public/images/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Bangers|Bree+Serif|Open+Sans+Condensed:300|Oswald|Passion+One|Sigmar+One|Fjalla+One"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="public/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="public/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="public/animate.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+</head>
+
+<body id="moviesTV">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img src="public/images/favicon.png" style="width: 2.5%; height: 2.5%;" alt="Popcorn">
+        <a class="navbar-brand" href="/">Now Playing</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/movies">Movies
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/tv">TV
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input id="dynamicSearch" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <a href="/dynamic">
+                    <button id="dynamicSearchButton" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </a>
+            </form>
+        </div>
+    </nav>
+
+    <div class="spinner">
+        <div id="bounce1"></div>
+        <div id="bounce2"></div>
+    </div>
+
+    <div class="container dynamicApiData">
+
+        <div class="row mt-4">
+            <div id="posterHolder" class="col-md-4">
+                <img id="poster" class="img-fluid" src="https://placehold.it/300x400" alt="">
+            </div>
+            <div class="col-md-8">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title center dynamicApiTitle" id="title"></h2>
+                        <p class="card-text">
+                            <strong>Run Time: </strong>
+                            <span id="runTime"></span>
+                        </p>
+                        <p class="card-text">
+                            <strong>Rating: </strong>
+                            <span id="rating"></span>
+                        </p>
+
+                        <p class="card-text">
+                            <Strong>Rotten Tomatoes: </Strong>
+                            <span id="rottenTomatoes"></span>
+                        </p>
+                        <p class="card-text">
+                            <Strong>IMDB: </Strong>
+                            <span id="imdb"></span>
+                        </p>
+                        <p class="card-text">
+                            <Strong>Metacritic: </Strong>
+                            <span id="metaCritic"></span>
+                        </p>
+                        <p class="card-text">
+                            <Strong>Awards: </Strong>
+                            <span id="awards"></span>
+                        </p>
+                        <p class="card-text">
+                            <strong>Cast: </strong>
+                            <span id="cast"></span>
+                        </p>
+                        <p class="card-text">
+                            <strong>Synopsis: </strong>
+                            <span id="synopsis"></span>
+                        </p>
+
+                    </div>
+                    <div class="card-footer center">
+                        <a href="https://www.imdb.com/showtimes/?ref_=nv_tp_sh_3" target="_blank" class="btn btn-primary background">Showtimes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card text-white bg-secondary my-4 text-center">
+            <div class="card-body">
+
+                <p id="synopsis2" class="text-white m-0"></p>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title dynamicApiTitle center">Trailer</h2>
+                        <div id="ytPlayer"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 similarCard">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title dynamicApiTitle center">Similar Titles</h2>
+                        <ul class="similarList">
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/public/dynamic.js"></script>
+</body>
+
+</html>
